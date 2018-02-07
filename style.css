@@ -4,37 +4,30 @@
 #main{
 	width: 100%;
 	margin: 0 auto;
-	border: 5px solid black;
-	height: 1000px
+	border: 5px solid black
 }
 #header{
-	height: 9%;
+	height: 300px;
 	border: 10px solid black;
-	height: 60px
 }
 #leftsidebar{
 	width: 20%;
-	height: 90%;
 	float: left;
-	border: 5px solid black;
-	height: 900px
+	border: 5px solid black
 }
 #rightsidebar{
 	width: 20%;
-	height: 90%;
 	float: right;
-	border: 5px solid black;
-	height: 900px
+	border: 5px solid black
 }
 #content{
 	width: 60%;
 	float: center;
-	height: 90%;
-	border: 5px solid black;
-	height: 900px
+	border: 5px solid black
 }
 #footer{
-	height: 1%;
+	height: 50px;
+	wigth: 100%;
 	clear: both;
 	border: 5px solid black;
 	height: 40px
