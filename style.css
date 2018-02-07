@@ -3,24 +3,20 @@
 }
 #main{
 	width: 100%;
-	margin: 0 auto;
-	border: 5px solid black
+	margin: 0 auto
 }
 #header{
-	height: 9%;
-	border-bottom: 2px solid black
+	height: 9%
 }
 #leftsidebar{
 	width: 20%;
 	height: 90%;
-	float: left;
-	border-right: 2px solid black
+	float: left
 }
 #rightsidebar{
 	width: 20%;
 	height: 90%;
-	float: right;
-	border-left: 2px solid black
+	float: right
 }
 #content{
 	width: 60%;
@@ -29,6 +25,5 @@
 }
 #footer{
 	height: 1%;
-	clear: both;
-	border-top: 2px solid black
+	clear: both
 }
