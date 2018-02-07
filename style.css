@@ -3,7 +3,8 @@
 }
 #main{
 	width: 100%;
-	margin: 0 auto
+	margin: 0 auto;
+	border: 1px white
 }
 #header{
 	height: 9%
