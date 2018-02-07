@@ -7,28 +7,28 @@
 	border: 5px solid black
 }
 #header{
-	height: 100px;
+	height: 9%;
 	border-bottom: 2px solid black
 }
 #leftsidebar{
-	width: 200px;
-	height: 500px;
+	width: 20%;
+	height: 90%;
 	float: left;
 	border-right: 2px solid black
 }
 #rightsidebar{
-	width: 200px;
-	height: 500px;
+	width: 20%;
+	height: 90%;
 	float: right;
-	border-right: 2px solid black
+	border-left: 2px solid black
 }
 #content{
-	width: 500px;
+	width: 60%;
 	float: center;
-	height: 500px
+	height: 90%
 }
 #footer{
-	height: 75px;
+	height: 1%;
 	clear: both;
 	border-top: 2px solid black
 }
