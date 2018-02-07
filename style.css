@@ -4,31 +4,30 @@
 #main{
 	width: 100%;
 	margin: 0 auto;
-	border: 5px solid black
+	border: 10px solid black
 }
 #header{
 	height: 300px;
-	border: 10px solid black;
+	border-bottom: 10px solid black;
 }
 #leftsidebar{
 	width: 20%;
 	float: left;
-	border: 5px solid black
+	border-right: 5px solid black
 }
 #rightsidebar{
 	width: 20%;
 	float: right;
-	border: 5px solid black
+	border-left: 5px solid black
 }
 #content{
 	width: 60%;
-	float: center;
-	border: 5px solid black
+	float: center
 }
 #footer{
 	height: 50px;
 	wigth: 100%;
 	clear: both;
-	border: 5px solid black;
+	border-top: 5px solid black;
 	height: 40px
 }
