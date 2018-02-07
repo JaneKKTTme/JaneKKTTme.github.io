@@ -4,38 +4,38 @@
 #main{
 	width: 100%;
 	margin: 0 auto;
-	border: 10px black;
+	border: 5px solid black;
 	height: 1000px
 }
 #header{
 	height: 9%;
-	border: 10px black;
+	border: 10px solid black;
 	height: 60px
 }
 #leftsidebar{
 	width: 20%;
 	height: 90%;
 	float: left;
-	border: 10px black;
+	border: 5px solid black;
 	height: 900px
 }
 #rightsidebar{
 	width: 20%;
 	height: 90%;
 	float: right;
-	border: 10px black;
+	border: 5px solid black;
 	height: 900px
 }
 #content{
 	width: 60%;
 	float: center;
 	height: 90%;
-	border: 10px black;
+	border: 5px solid black;
 	height: 900px
 }
 #footer{
 	height: 1%;
 	clear: both;
-	border: 10px black;
+	border: 5px solid black;
 	height: 40px
 }
