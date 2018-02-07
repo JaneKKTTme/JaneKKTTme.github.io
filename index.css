@@ -1,0 +1,8 @@
+﻿*{
+	box-sizing: border-box
+}
+#main{
+	width: 810px;
+	margin: 0 auto;
+	border: 2px solid black
+}
