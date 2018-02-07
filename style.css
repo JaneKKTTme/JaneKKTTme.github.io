@@ -4,27 +4,32 @@
 #main{
 	width: 100%;
 	margin: 0 auto;
-	border: 1px floralwhite;
+	border: 1px blue
 }
 #header{
-	height: 9%
+	height: 9%;
+	border: 1px blue
 }
 #leftsidebar{
 	width: 20%;
 	height: 90%;
-	float: left
+	float: left;
+	border: 1px blue
 }
 #rightsidebar{
 	width: 20%;
 	height: 90%;
-	float: right
+	float: right;
+	border: 1px blue
 }
 #content{
 	width: 60%;
 	float: center;
-	height: 90%
+	height: 90%;
+	border: 1px blue
 }
 #footer{
 	height: 1%;
-	clear: both
+	clear: both;
+	border: 1px blue
 }
