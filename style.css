@@ -7,18 +7,15 @@
 	background-image: url(background.jpg)
 }
 #header{
-	height: 300px;
-	border-bottom: 10px solid red
+	height: 300px
 }
 #leftsidebar{
 	width: 20%;
-	float: left;
-	border-right: 5px solid red
+	float: left
 }
 #rightsidebar{
 	width: 20%;
 	float: right;
-	border-left: 5px solid red
 }
 #content{
 	width: 60%;
@@ -28,6 +25,5 @@
 	height: 50px;
 	wigth: 100%;
 	clear: both;
-	border-top: 5px solid red;
 	height: 40px
 }
