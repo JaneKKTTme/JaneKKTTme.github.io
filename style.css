@@ -9,7 +9,8 @@
 }
 #header{
 	height: 300px;
-	border-bottom: 5px solid black
+	border-bottom: 5px solid black;
+	background-image: url(city.jpg)
 }
 #leftsidebar{
 	width: 20%;
