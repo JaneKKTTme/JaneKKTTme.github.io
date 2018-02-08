@@ -5,23 +5,23 @@
 	width: 100%;
 	margin: 0 auto;
 	background-image: url(background.jpg);
-	border-right: 5px solid black
+	border-right: 1px transparent
 }
 #header{
 	height: 300px;
-	border-bottom: 5px solid black
+	border-bottom: 1px transparent
 }
 #leftsidebar{
 	width: 20%;
 	height: 1200px;
 	float: left;
-	border-right: 3px solid black
+	border-right: 1px transparent
 }
 #rightsidebar{
 	width: 20%;
 	height: 1200px;
 	float: right;
-	border-left: 3px solid black
+	border-left: 1px transparent
 }
 #content{
 	width: 60%;
@@ -33,5 +33,5 @@
 	wigth: 100%;
 	clear: both;
 	height: 40px;
-	border-top: 3px solid black
+	border-top: 1px transparent
 }
