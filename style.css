@@ -9,19 +9,19 @@
 }
 #header{
 	height: 300px;
-	border-bottom: 1px transparent
+	border-bottom: 5px solid black
 }
 #leftsidebar{
 	width: 20%;
 	height: 1200px;
 	float: left;
-	border-right: 1px transparent
+	border-right: 5px solid black
 }
 #rightsidebar{
 	width: 20%;
 	height: 1200px;
 	float: right;
-	border-left: 1px transparent
+	border-left: 5px solid black
 }
 #content{
 	width: 60%;
@@ -33,5 +33,5 @@
 	wigth: 100%;
 	clear: both;
 	height: 40px;
-	border-top: 1px transparent
+	border-top: 5px solid black
 }
