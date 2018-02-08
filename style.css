@@ -4,11 +4,11 @@
 #main{
 	width: 100%;
 	margin: 0 auto;
-	border: 10px red
+	border: 10px solid red
 }
 #header{
 	height: 300px;
-	border-bottom: 10px red
+	border-bottom: 10px solid red
 }
 #leftsidebar{
 	width: 20%;
