@@ -4,7 +4,8 @@
 #main{
 	width: 100%;
 	margin: 0 auto;
-	border: 10px solid red
+	border: 10px solid red;
+	background-image: url(background.jpg)
 }
 #header{
 	height: 300px;
