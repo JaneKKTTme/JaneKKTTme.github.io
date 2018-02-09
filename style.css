@@ -4,13 +4,13 @@
 #main{
 	width: 100%;
 	margin: 0 auto;
-	background-image: url(hat.jpg);
+	background-image: url(image.jpg);
 	border-right: 1px transparent
 }
 #header{
 	height: 300px;
 	border-bottom: 5px solid black;
-	background: url(city.jpg);
+	background: url(hat.jpg);
 	background-size: cover
 }
 #leftsidebar{
