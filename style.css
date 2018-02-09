@@ -5,7 +5,7 @@
 	width: 100%;
 	margin: 0 auto;
 	background-image: url(image.jpg);
-	border-right: 1px transparent
+	border-right: 0px transparent
 }
 #header{
 	height: 300px;
@@ -30,7 +30,7 @@
 	float: center
 }
 #footer{
-	height: 50px;
+	height: 100px;
 	wigth: 100%;
 	clear: both;
 	border-top: 5px solid black;
