@@ -10,8 +10,7 @@
 #header{
 	height: 300px;
 	border-bottom: 5px solid black;
-	background: url(hat.jpg);
-	background-size: cover
+	background-image: url(hat.jpg)
 }
 #leftsidebar{
 	width: 20%;
