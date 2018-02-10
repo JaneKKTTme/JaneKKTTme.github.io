@@ -29,7 +29,9 @@
 #content{
 	width: 60%;
 	height: 1100px;
-	float: center
+	float: center;
+	background: url(hack.png);
+	background-size: cover
 }
 #footer{
 	height: 100px;
