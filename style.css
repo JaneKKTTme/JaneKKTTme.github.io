@@ -32,7 +32,7 @@
 	float: center;
 	background: url(hack.png);
 	background-size: cover;
-	background-origin: padding-box
+	background-position-x: 60%
 }
 #footer{
 	height: 100px;
