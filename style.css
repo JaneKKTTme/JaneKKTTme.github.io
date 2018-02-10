@@ -4,7 +4,7 @@
 #main{
 	width: 100%;
 	margin: 0 auto;
-	background: url(image.jpg);
+	background: url(images.jpg);
 	background-size: cover;
 	border-right: 0px transparent
 }
