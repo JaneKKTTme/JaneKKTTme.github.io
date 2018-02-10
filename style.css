@@ -4,13 +4,15 @@
 #main{
 	width: 100%;
 	margin: 0 auto;
-	background-image: url(image.jpg);
+	background: url(image.jpg);
+	background-size: cover;
 	border-right: 0px transparent
 }
 #header{
 	height: 300px;
 	border-bottom: 5px solid black;
-	background-image: url(top.jpg)
+	background: url(top.jpg);
+	background-size: cover
 }
 #leftsidebar{
 	width: 20%;
