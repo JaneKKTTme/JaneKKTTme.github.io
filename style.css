@@ -29,9 +29,7 @@
 #content{
 	width: 60%;
 	height: 1100px;
-	
-	background: black;
-	background-origin: padding-box;
+	float: center;
 }
 #footer{
 	height: 100px;
