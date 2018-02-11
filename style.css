@@ -29,7 +29,7 @@
 #content{
 	width: 60%;
 	height: 1100px;
-	float: center;
+	
 	background: black;
 	background-origin: padding-box;
 }
