@@ -30,7 +30,8 @@
 	width: 60%;
 	height: 1100px;
 	float: center;
-	background-color: black;
+	background: black;
+	background-position-x: 50%;
 }
 #footer{
 	height: 100px;
