@@ -1,21 +1,473 @@
-﻿<!DOCTYPE html>
+﻿`<!DOCTYPE html>
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+  crossorigin="anonymous"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  :root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-black: #000000;
+    --main-gray: #303841;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    background: var(--main--black);
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  @media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+  header {
+    height: 300px;
+    font-size: 2rem;
+    font-weight: 20;
+    font-style: italic;
+    color: var(--main-white);
+    background: var(--main-black);
+    border: 8px outset #1A1F00;
+  }
+  header > h1 {
+    top: 150px;
+    text-align: center;
+    vertical-align: baseline;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem; /* 18px */
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: var(--main-white);
+  }
+  .nav {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1B9AAA;
+    z-index: 10;
+    border: 4px double black;
+  }
+  .nav-list {
+    display: flex;
+    margin-right: 2rem;
+    font-weight: 200;
+    font-style: italic;
+  }
+  @media (max-weight: 28.75em) {
+    .nav {
+        justify-content: center;
+    }
+    .nav-list {
+      margin: 0 1rem;
+    }
+  }
+  .nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+  }
+  .nav-list a:hover {
+    background: #11606B;
+  }
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #212121;
+  }
+  .welcome-section > h2 {
+    font-size: 2.5rem;
+    font-weight: 200;
+  }
+  .welcome-section > p {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .welcome-section a {
+    color: #800000;
+    font-style: italic;
+  }
+  .welcome-section a:visited {
+    color: #808000;
+    font-style: italic;
+  }
+  .acsent {
+    font-size: 2.5rem;
+    font-weight: 200;
+    font-style: italic;
+    color: #A44A4A;
+  }
+  .projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background: #DDDBCB;
+  }
+  .projects-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-white);
+  }
+
+  @media (max-width: 28.75em) {
+    .projects-section-header {
+      font-size: 4rem;
+    }
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+  @media (max-width: 30.625em) {
+    .projects-section {
+      padding: 6rem 1rem;
+    }
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .project {
+    background: var(--main-gray);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+  .project:hover {
+    background-color: #13161A;
+  }
+  .code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-out;
+  }
+  .project:hover .code {
+    color: #ff7f50;
+  }
+  .project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+    border: 4px outset black;
+    border-radius: 2px;
+  }
+  .project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+  }
+  .project-title:hover {
+    font-size: 4rem;
+    padding: 2rem 0.5rem;
+  }
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    padding: 0 2rem;
+  }
+  @media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+      font-size: 4rem;
+    }
+  }
+  #universe {
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-position: center 0%;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  }
+  #galaxy {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(75deg);
+    transform-style: preserve-3d;
+  }
+  #sun, .planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0.9em;
+    height: 0.9em;
+    margin-left: -0.447em;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    object-position: center;
+  }
+  #sun {
+    background-color: #FB7209;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 60px rgba(255, 160, 60, 0.4); 
+    transform: rotateX(-75deg);
+  }
+  .pos {
+    position: absolute;
+    transform-style: preserve-3d;
+    animation-name: invert;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .planet {
+    background-color: #6B0000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    margin-top: -0.4em;
+  }
+  .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 0.0001px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation-name: orbit;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    transform-style: preserve-3d;
+  }
+  /* Animations */
+  @keyframes orbit {
+    0%   { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(-360deg); } 
+  }
+  @keyframes invert {
+    0%   { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+    100% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); } 
+  }
+  /* Orbit sizes */
+  #mercury.orbit {
+    width: 9em;
+    height: 9em;
+    margin-top: -3em;
+    margin-left: -4.5em; 
+  }
+  /* Planet starting positions */
+  #mercury .pos {
+    left: 50%;
+    top: -1px; 
+    border: solid 3px red;
+  } 
+  /* Planet animation durations */
+  #mercury.orbit, #mercury .pos {
+    animation-duration: 8s;
+  }
+  /* Planet sizes */
+  #sun {
+    font-size: 24em;
+  }
+  #mercury {
+    font-size: 4em;
+  }
+  /* Planet shadow animations */
+  #mercury .planet {
+    animation-name: shadow-mercury;
+    animation-duration: 8s;
+  }
+  @keyframes shadow-mercury {
+    0% {box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.5); /* TOP */ }
+    25% {box-shadow: inset 16px 0 8px rgba(0, 0, 0, 0.5); /* LEFT */ }
+    50% {box-shadow: inset 40px -60px 16px rgba(0, 0, 0, 0.5); /* BOTTOM */ }
+    50.01% {box-shadow: inset -40px -60px 16px rgba(0, 0, 0, 0.5); /* BOTTOM */ }
+    75% {box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.5); /* RIGHT */ }
+    100% {box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); /* TOP */ }    
+  }
+  .planet:hover, .orbit:hover, .pos:hover  {
+    animation-play-state: paused;
+  }
+  #sun {
+    background-image: url(images/sun.jpg);
+  }
+  .planet {
+    background-image: url(images/mercury.jpg); 
+  }
+  .contact-section {
+    background-image: url(images/stars.jpg); 
+  }
+  #universe {
+    background-image: url(images/universe.jpg); 
+  }
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+  .contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+    margin-left: 50px;
+    text-decoration: underline;
+  }
+  .contact-details:hover {
+    transform: translateY(8px);
+  }
+  @media (max-width: 27.8em) {
+    .contact-details {
+      font-size: 2rem;
+      margin-left: 10px;
+    }
+  }
+  footer {
+    height: 50px;
+    background-color: black;
+  }
+  footer > p {
+    text-align: right;
+    margin-right: 10px;
+  }
+  @media (max-width: 27.8em) {
+    footer > p {
+      text-align: center;
+    }
+  }
+</style>
 <html>
 <head>
-<title>Hi! This is me. And you are in my world.</title>
-<meta charset = "utf-8">
-<link rel = "stylesheet" href = "style.css">
+  <title>Jane's Portfolio</title>
+  <meta charset = "utf-8">
 </head>
 <body>
-<div id = "main">
-<div id = "header"></div>
-<div id = "leftsidebar"></div>
-<div id = "rightsidebar"></div>
-<div id = "content">
-
-</div>
-<div id = "footer">
-
-</div>
-</div>
+  <header>
+    <h1></h1>
+  </header>
+  <nav id="navbar" class="nav">
+     <ul class="nav-list">
+       <li>
+         <a href="#welcome-section">About</a>
+       </li>
+       <li>
+         <a href="#projects">Work</a>
+       </li>
+       <li>
+         <a href="#contact">Contact</a>
+       </li>
+     </ul>
+  </nav>
+  <section id="welcome-section" class="welcome-section">
+    <h1>How do you do? I'm Jane.</h1>
+    <h2>For 2 years I have been studying for B.S. in 
+<em class="acsent">MIREA - Russian Technological 
+University</em>.</h2>
+    <h2>My future specialize is <em class="acsent">Software 
+engineering</em>.</h2>
+    <p>I'm fond of programming since I was tought in 
+<a href="http://www.school.mipt.ru/" target="_blank">Correspondence Physics 
+and Technologies School</a> of <a href="https://mipt.ru/" 
+target="_blank">MIPT</a>. My decision was obvious. After graduating in 2017 
+I applyed for admission in <a href="https://www.mirea.ru/" 
+target="_blank">my alma mater</a>.</p>
+  </section>
+  <section id="projects" class="projects-section">
+  <h2 class="projects-section-header">My projects</h2>
+  <div class="projects-grid">
+    <a
+      href="https://github.com/JaneKKTTme/Numeric_transfer"
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src=""
+        alt="project"
+      />
+      <p class="project-title">Numeric Transfer</p>
+    </a>
+    <a
+      href="https://github.com/glimb-developers-team"
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="images/glimb.jpg"
+        alt="project"
+      />
+      <p class="project-title">Glimb</p>
+    </a>
+  </div>
+  </section>
+  <section id="contact" class="contact-section">
+    <div id="universe">
+      <div id="galaxy">
+        <div id="sun">
+        </div>
+        <div id="mercury" class="orbit">
+          <div class="pos">
+            <div class="planet">
+            <!--Signs will fly-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="solar.js"></script>
+  </section>
+  <footer>
+    <p>
+    Copyrighting &copy; 2018-2019
+    </p> 
+    <p>
+    <a href="https://github.com/JaneKKTTme">JaneKKTTme.</a>
+    </p>
+  </footer>
 </body>
 </html>
