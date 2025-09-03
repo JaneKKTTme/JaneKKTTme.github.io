@@ -1,50 +1,102 @@
-var slideIndex = 0;
-var timer1, timer;
-var slides = document.getElementsByClassName("slides");
-var dots = document.getElementsByClassName("dot");
+let slideIndex = 0;
+let slideInterval;
 
-function showSlides() {//called by automatic slideshow
-    clearTimeout(timer1);//clear previously set timer 
-
-    //clear styles
-    for (var i = 0; i < slides.length; i++)
-        slides[i].style.display = "none";           
-    for (var i = 0; i < dots.length; i++) 
-        dots[i].className = dots[i].className.replace(" active", "");
-    
-    //reset slideIndex
-    if (++slideIndex == slides.length)
-        slideIndex = 0;
-
-    //reset styles
-    slides[slideIndex].style.display = "block"; 
-    dots[slideIndex].className += " active";
-    
-    //reset timer
-    timer1 = setTimeout(showSlides, 3000);
+// === СЛАЙДЕР ===
+// Функция для запуска/перезапуска автопрокрутки
+function startSlideShow() {
+    const slides = document.getElementsByClassName("slides");
+    clearInterval(slideInterval); // Очищаем предыдущий интервал перед запуском нового
+    slideInterval = setInterval(() => {
+        showSlide(slideIndex + 1);
+    }, 5000);
 }
 
-function showSlide(n) {//called when user manually choose particular slide
-    //clear previously set timers
-    clearTimeout(timer1);
-    clearTimeout(timer);
-
-    //clear styles
-    for (var i = 0; i < slides.length; i++) 
-        slides[i].style.display = "none";
-    for (var i = 0; i < dots.length; i++) 
-        dots[i].className = dots[i].className.replace(" active", "");
-
-    //reset slideIndex
-    if (n == slides.length)
-        slideIndex = 0; 
-    if (n < 0)
-        slideIndex = slides.length;
-
-    //reset styles
-    slides[slideIndex].style.display = "block"; 
+// Главная функция для показа слайда
+function showSlide(n) {
+    const slides = document.getElementsByClassName("slides");
+    const dots = document.getElementsByClassName("dot");
+    // Скрываем все слайды
+    for (let slide of slides) {
+        slide.style.display = "none";
+    }
+    // Убираем активный класс со всех точек
+    for (let dot of dots) {
+        dot.className = dot.className.replace(" active", "");
+    }
+    // Корректируем индекс
+    slideIndex = (n + slides.length) % slides.length;
+    // Показываем нужный слайд
+    slides[slideIndex].style.display = "flex";
+    // Активируем соответствующую точку
     dots[slideIndex].className += " active";
 
-    //reset timer for automatic slideshow
-    timer = setTimeout(showSlides, 10000);
+    // Перезапускаем автопрокрутку после ручного переключения
+    startSlideShow();
 }
+
+function currentSlide(n) {
+    showSlide(n);
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.getElementById("burger");
+    const nav = document.querySelector("nav");
+
+    burger.addEventListener("click", () => {
+        nav.classList.toggle("show");
+    });
+
+    // Чтобы закрыть при клике вне меню
+    document.addEventListener("click", (e) => {
+        if (!nav.contains(e.target) && 
+                !(e.target === burger || burger.contains(e.target)) &&
+                nav.classList.contains("show")) {
+            nav.classList.remove("show");
+        }
+    });
+
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('show');
+        });
+    })
+
+    showSlide(slideIndex);
+    startSlideShow();
+
+    // Scroll to Top Button
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    }
+
+    scrollBtn.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+        threshold: 0.1, // Элемент считается видимым, когда 10% его площади в зоне видимости
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            }
+            entry.target.classList.add('fade');
+            appearOnScroll.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+});

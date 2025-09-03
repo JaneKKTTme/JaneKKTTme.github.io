@@ -1,102 +1,141 @@
 ﻿<!DOCTYPE html>
+<html lang="ru">
 <head>
 	<title>JaneKKTTme's portfolio</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="styles.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="Портфолио Евгении Хоменко — аналитика данных. Проекты, навыки, образование.">
+	<meta name="keywords" content="Аналитика данных, Python, SQL, Портфолио, Евгения Хоменко">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
 	<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Oxanium:wght@200..800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 	<script src="slide-script.js" type="text/javascript"></script>
 </head>
-<body onload="showSlide(1);">
+<body>
+	<button id="burger" aria-label="Меню">
+  		<i class="fas fa-bars"></i>
+	</button>
 	<nav>
-		<div class="leftnav">
-			<p>Евгения<br/>Хоменко</p>
-			<img src="./images/photo.png" alt="photo"></img>
-			<a href="#about">Обо мне</a>
-			<a href="#education">Образование</a>
-			<a href="#projects">Проекты</a>
-		</div>
-		<div class="contacts">
-			<a href="mailto:eugenia.khomenko.ru@gmail.com">
-				<i class="fa fa-envelope" style='font-size:15px'></i> eugenia.khomenko.ru@gmail.com
-			</a>
-			<a href="https://www.linkedin.com/in/janekkttme/">
+		<ul class="leftnav">
+			<li><p>Евгения<br/>Хоменко</p></li>
+			<li><div class="image"><img src="./images/photo.png" alt="photo"/></div></li>
+			<li><a href="#about">Обо мне</a></li>
+			<li><a href="#education">Образование</a></li>
+			<li><a href="#projects">Проекты</a></li>
+		</ul>
+		<ul class="contacts">
+			<li><a href="mailto:eugenia.khomenko.ru@gmail.com">
+				<i class="fa fa-envelope" style='font-size:15px'></i> email
+			</a></li>
+			<li><a href="https://www.linkedin.com/in/janekkttme/">
 				<i class="fab fa-linkedin" style='font-size:15px'></i> linkedin
-			</a>
-			<a href="https://github.com/JaneKKTTme">
-				<i class="fab fa-github" style='font-size:15px'></i> janeKKTTme
-			</a>
-		</div>
+			</a></li>
+			<li><a href="https://github.com/JaneKKTTme">
+				<i class="fab fa-github" style='font-size:15px'></i> github
+			</a></li>
+		</ul>
 	</nav>
-	<section id="about" class="column-container">	
+	<section id="about" class="column-container fade-in">	
 		<div class="leftcolumn">
-			<p class="lefttext">Доброго времени суток!<br/>Я начинающий аналитик данных, выпускник с отличием в области компьютерных наук.<br/>Обладаю навыками работы с SQL, Python и Excel, умею анализировать данные и создавать отчеты на основе полученной информации.<br/>Я полон стремления развиваться в этой области и готов активно участвовать в командной работе, применяя свои аналитические способности для оптимизации бизнес-процессов.</p>
+			<p class="lefttext">Аналитик в душе, разработчик в процессе становления приветствует вас.</p>
+			<p class="lefttext">Обожаю, когда всё логично.</p>
+			<p class="lefttext">Поэтому мой путь лежит в бэкенд-разработку. Я начинающий специалист, который верит, что основа хорошего продукта — это чистый код, продуманная архитектура и слаженная работа команды. Готова учиться, стараться и приносить пользу.</p>
 		</div>
 		<div class="rightcolumn">
-			<p class="righttext">Hard skills</p>
-			<ul>
-				<li>Языки программирования: Python, HTML, CSS</li>
-				<li>Работа с базами данных: SQL</li>
-				<li>Анализ данных: numpy, pandas, matplotlib, seaborn</li>
-				<li>Машинное обучение: sklearn</li>
-				<li>Нейронные сети: tensorflow</li>
-				<li>Другое: Git, Linux, MS Office</li>
-			</ul>
-
-			<p class="righttext">Soft skills</p>
-			<ul>
-				<li>Аналитический склад ума</li>
-				<li>Работа в команде</li>
-				<li>Знание английского языка (чтение технической документации)</li>
-			</ul>
+			<div><p class="righttext">Технические навыки</p></div>
+			<div class="skills">
+				<div class="skilltype">Языки программирования
+					<br/><p class="skill">Python</p>
+				</div>
+				<div class="skilltype">Работа с базами данных
+					<br/><p class="skill">SQL</p>
+				</div>
+				<div class="skilltype">Анализ данных 
+					<br/><p class="skill">numpy</p>
+					<p class="skill">pandas</p>
+					<p class="skill">matplotlib</p>
+					<p class="skill">seaborn</p>
+				</div>
+				<div class="skilltype">Машинное обучение
+					<br/><p class="skill">sklearn</p>
+				</div>
+				<div class="skilltype">Веб-разработка
+					<br/><p class="skill">HTML</p>
+					<p class="skill">CSS</p>
+				</div>
+				<div class="skilltype">Другое
+					<br/><p class="skill">Git</p>
+					<p class="skill">Linux</p>
+				</div>
+			</div>
+			<div><p class="righttext">Гибкие навыки</p></div>
+			<div class="skills">
+				<p class="skill">Аналитический склад ума</p>
+				<p class="skill">Работа в команде</p>
+				<p class="skill">Чтение технической документации</p>
+			</div>
 		</div>
 	</section>
-	<section id="education">
+	<section id="education" class="fade-in">
 		<div>
 			<div class="education">
-				<p class="year"> 2022 - </p>
-				<p class="program">Big Data and Machine Learning</p>
-				<p>ITMO</p>
-				<p>?</p>
+				<p class="year"> 2022 - 2024</p>
+				<p class="program">Большие данные и машинное обучение</p>
+				<p>Магистратура, ИТМО, неоконченное</p>
 			</div>
-			<p><hr class="hreducation"></p>
+			<hr class="hreducation">
 			<div class="education">
 				<p class="year"> 2018 - 2020 </p>
-				<p class="program">Trans</p>
-				<p>MIREA - Russian Technological University</p>
-				<p>GPA: ?</p>
+				<p class="program">Переводчик в технической сфере</p>
+				<p>МИРЭА- Российский Технологический Университет</p>
+				<p>Средний балл: 5,0 / 5,0</p>
 			</div>
-			<p><hr class="hreducation"></p>
+			<hr class="hreducation">
 			<div class="education">
 				<p class="year"> 2017 - 2021 </p>
-				<p class="program">Software Engineering</p>
-				<p>MIREA - Russian Technological University</p>
-				<p>GPA: 4,97 / 5,0</p>
+				<p class="program">Программная инженерия</p>
+				<p>Бакалавриат, МИРЭА- Российский Технологический Университет</p>
+				<p>Средний балл: 4,97 / 5,0</p>
 			</div>
 		</div>
 	</section>
-	<section  id="projects">	
-		<div  class="container">
-			<div class="slides">
-				<img scr="./images/photo.png" alt="photo1" class="projectimg" style="display: block;"/>
-				<div class="text">text1</div>
+	<section  id="projects" class="fade-in">	
+		<div class="container">
+			<div class="slides fade">
+				<div>
+					<img src="./images/project1.jpg" alt="Основные данные и используемые технологии"/>
+				</div>
+				<div class="text">Анализ набора данных ментального здоровья (в процессе :)))</div>
+				<div class="description">Данные содержат информацию о лечении пациентов в нескольких Австрийских психиатрических клиниках.</div>
 			</div>
-			<div class="slides">
-				<img scr="./images/photo.jpg" alt="photo2" width="400" height="400" />
-				<div class="text">text2</div>
+			<div class="slides fade">
+				<div>
+					<img src="./images/project2.jpg" alt="---"/>
+				</div>
+				<div class="text">Сервис для сокращения ссылок (в процессе :)))</div>
+				<div class="description">Сервис для сокращения ссылок с базой данных</div>
 			</div>
 			<a class="prev" onclick="showSlide(--slideIndex);">❮</a>
 			<a class="next" onclick="showSlide(++slideIndex);">❯</a>
+
+			<div class="dot-container">
+  				<span class="dot" onclick="currentSlide(0);"></span>
+  				<span class="dot" onclick="currentSlide(1);"></span>
+			</div>
 		</div>
-		<br>
-		<div style="text-align:center">
-  			<span class="dot" onclick="showSlide(slideIndex = 0);"></span>
-  			<span class="dot" onclick="showSlide(slideIndex = 1);"></span>
-		</div>
+		
+		
 	</section>
+
+	<!-- Scroll-to-top Button -->
+	<button id="scrollTopBtn" aria-label="Наверх">↑</button>
+
 </body>
 </html>
