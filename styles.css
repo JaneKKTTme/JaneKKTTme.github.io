@@ -471,6 +471,11 @@ hr.hreducation {
 	transform: scale(1.1);
 }
 
+#projects a {
+	text-decoration: none;
+	color: var(--text-on-dark);
+}
+
 #projects .text {
 	color: var(--text-on-dark);
 	font-size: 1.2rem;
