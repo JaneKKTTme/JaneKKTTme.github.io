@@ -1,36 +1,36 @@
 let slideIndex = 0;
 let slideInterval;
 
-// === СЛАЙДЕР ===
-// Функция для запуска/перезапуска автопрокрутки
+// === SLIDER ===
+// Function to start/restart auto-scrolling
 function startSlideShow() {
     const slides = document.getElementsByClassName("slides");
-    clearInterval(slideInterval); // Очищаем предыдущий интервал перед запуском нового
+    clearInterval(slideInterval); // Clear previous interval before starting new one
     slideInterval = setInterval(() => {
         showSlide(slideIndex + 1);
     }, 5000);
 }
 
-// Главная функция для показа слайда
+// Main function to display slide
 function showSlide(n) {
     const slides = document.getElementsByClassName("slides");
     const dots = document.getElementsByClassName("dot");
-    // Скрываем все слайды
+    // Hide all slides
     for (let slide of slides) {
         slide.style.display = "none";
     }
-    // Убираем активный класс со всех точек
+    // Remove active class from all dots
     for (let dot of dots) {
         dot.className = dot.className.replace(" active", "");
     }
-    // Корректируем индекс
+    // Adjust index
     slideIndex = (n + slides.length) % slides.length;
-    // Показываем нужный слайд
+    // Display the required slide
     slides[slideIndex].style.display = "flex";
-    // Активируем соответствующую точку
+    // Activate corresponding dot
     dots[slideIndex].className += " active";
 
-    // Перезапускаем автопрокрутку после ручного переключения
+    // Restart auto-scrolling after manual switching
     startSlideShow();
 }
 
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nav.classList.toggle("show");
     });
 
-    // Чтобы закрыть при клике вне меню
+    // To close when clicking outside the menu
     document.addEventListener("click", (e) => {
         if (!nav.contains(e.target) && 
                 !(e.target === burger || burger.contains(e.target)) &&
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const faders = document.querySelectorAll('.fade-in');
 
     const appearOptions = {
-        threshold: 0.1, // Элемент считается видимым, когда 10% его площади в зоне видимости
+        threshold: 0.1, // Element is considered visible when 10% of its area is in viewport
         rootMargin: "0px 0px -50px 0px"
     };
 
