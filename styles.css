@@ -384,161 +384,229 @@ hr.hreducation {
 }
 
 #projects {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
- 	align-items: center;
- 	min-height: 100vh;
- 	height: 100%;
- 	box-sizing: border-box;
- 	padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    overflow: visible;
 }
 
 .container {
-	width: 90%;
-	max-width: 1200px;
-	height: auto;
-	position: relative;
-	margin: auto;
-	border-radius: 12px;
-	vertical-align: middle;
-	background-color: var(--card-bg);
-	padding: 20px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 1200px;
+    min-height: 70vh;
+    height: auto;
+    position: relative;
+    margin: auto;
+    border-radius: 12px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
 }
 
 #projects .slides {
-	display: none;
-	flex-direction: column;
-	justify-content: center;
- 	align-items: center;
- 	text-align: center;
- 	height: auto;
- 	position: relative;
- 	margin: 1%;
- 	margin-top: -1%;
- 	margin-bottom: 5px;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    position: relative;
+    margin: 1%;
+    margin-bottom: 5px;
+    min-height: 60vh;
+    gap: 15px;
 }
 
 #projects .slides:first-child {
-	display: flex;
+    display: flex;
 }
 
 #projects .slides img {
-	object-fit: contain;
-	max-width: 100%;
-	max-height: 60vh;
-	height: auto;
-	border-radius: 8px;
-	transition: var(--transition);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 40vh;
+    height: auto;
+    border-radius: 8px;
+    transition: var(--transition);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
 #projects .slides img:hover {
-	transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+/* Контейнер для изображения с наложенными технологиями */
+#projects .slides > div:first-child {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Технологии на изображении */
+#projects .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 8px 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    z-index: 10;
+}
+
+#projects .tech-tag {
+    background-color: var(--accent);
+    color: var(--text-on-dark);
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+#projects .tech-tag:hover {
+    background-color: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+#projects .text {
+    color: var(--text-on-dark);
+    font-size: 1.2rem;
+    padding: 10px 5px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    min-height: auto;
+    margin: 5px 0;
+}
+
+#projects .description {
+    color: var(--text-on-light);
+    font-size: 1rem;
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-light);
+    border-radius: 8px;
+    max-width: 90%;
+    margin: 5px auto;
+    flex-grow: 1;
+}
+
+#projects .project-links {
+    margin: 10px 0 5px 0;
+    padding: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+    color: var(--text-on-dark);
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+#projects .source-link:hover {
+    background: transparent;
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 121, 79, 0.3);
 }
 
 .prev, .next {
-	background-color: var(--accent);
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
-	padding: 16px;
-	margin-top: -25px;
-	color: var(--text-on-dark);
-	font-weight: 700;
-	font-size: 20px;
-	border-radius: 50%;
-	user-select: none;
-	-webkit-user-select: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: var(--transition);
-	border: 2px solid var(--accent);
-	transform: translateY(-50%);
-	z-index: 100;
+    background-color: var(--accent);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin-top: -22px;
+    color: var(--text-on-dark);
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 8px;
+    user-select: none;
+    -webkit-user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    border: 2px solid var(--accent);
+    transform: translateY(-50%);
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .next {
-	right: 20px;
+    right: 20px;
 }
 
 .prev {
-	left: 20px;
+    left: 20px;
 }
 
 .prev:hover,
 .next:hover {
-	background-color: transparent;
-	color: var(--accent);
-	transform: scale(1.1);
-}
-
-#projects a {
-	text-decoration: none;
-	color: var(--text-on-dark);
-}
-
-#projects .text {
-	color: var(--text-on-dark);
-	font-size: 1.2rem;
-	padding: 15px 10px;
-	position: static;
-	margin: 10px 0;
-	height: 10%;
-	bottom: 13%;
-	width: 100%;
-	text-align: center;
-	font-weight: 600;
-}
-
-#projects .description {
-	color: var(--text-on-light);
-	font-size: 1rem;
-	padding: 12px;
-	position: static;
-	margin-top: 5px;
-	height: 10%;
-	bottom: 10%;
-	width: 100%;
-	text-align: center;
-	background-color: var(--primary-light);
-	border-radius: 8px;
-	max-width: 90%;
-	margin: 10px auto;
+    background-color: transparent;
+    color: var(--accent);
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 #projects .dot-container {
-	margin: 20px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
- 	align-items: center;
- 	text-align: center;
- 	height: auto;
- 	position: relative;
- 	margin-bottom: 1%;
+    margin: 15px 0 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    position: relative;
 }
 
 #projects .dot {
-	position: static;
-	cursor: pointer;
-	height: 15px;
-	width: 15px;
-	margin: 5px;
-	border-radius: 50%;
-	display: block;
-	transition: var(--transition);
-	text-items: center;
-	background-color: #bbb;
-	border: 1px solid #333;
+    position: static;
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 3px 5px;
+    border-radius: 50%;
+    display: block;
+    transition: var(--transition);
+    background-color: #bbb;
+    border: 1px solid #333;
 }
 
 #projects .active, .dot:hover {
-	background-color: var(--accent);
-	transform: scale(1.2);
+    background-color: var(--accent);
+    transform: scale(1.2);
 }
 
 @media (min-width: 1061px) {
@@ -671,16 +739,53 @@ hr.hreducation {
     	height: 100%;
     	min-height: 80vh;
     	padding: 20px 10px;
+    	justify-content: flex-start;
     }
 
     .container {
-    	display: flex;
-    	flex-direction: column;
-    	justify-content: center;
-    	box-sizing: border-box;
-    	padding: 20px;
+    	padding: 15px;
     	width: 95%;
-    	max-height: 100vh;
+    	min-height: 60vh;
+    	margin-bottom: 20px;
+    }
+
+    #projects .slides {
+    	min-height: 50vh;
+    	gap: 8px;
+    	padding: 5px 0;
+    }
+
+    #projects .slides img {
+    	max-height: 35vh;
+    	margin: 0 auto;
+    }
+
+    #projects .project-tech {
+    	bottom: 8px;
+    	padding: 6px 8 px;
+    	gap: 4px;
+    }
+
+    #projects .project-tag {
+    	font-size: 0.7rem;
+    	padding: 3px 8 px;
+    }
+
+    #projects .text {
+    	font-size: 1.1rem;
+    	padding: 8px 5px;
+    	margin: 3px 0;
+    }
+
+    #projects .description {
+        font-size: 0.9rem;
+        padding: 10px;
+        margin: 3px auto;
+    }
+    
+    #projects .source-link {
+        padding: 6px 14px;
+        font-size: 0.85rem;
     }
 
     .slides {
@@ -702,12 +807,11 @@ hr.hreducation {
     }
 
     .prev, .next {
-		position: absolute;
-		top: 50%;
-		width: auto;
-		padding: 10px;
+		width: 38px;
+		height: 38px;
 		font-size: 16px;
-		margin-top: -22px;
+		margin-top: -19px;
+		border-radius: 6px;
 	}
 
 	.next {
@@ -717,6 +821,81 @@ hr.hreducation {
 	.prev {
 		left: 10px;
 	}
+}
+
+@media (max-width: 480px) {
+    #projects {
+        min-height: 70vh;
+        padding: 15px 5px;
+    }
+    
+    .container {
+        width: 98%;
+        padding: 10px;
+        min-height: 55vh;
+    }
+    
+    #projects .slides img {
+        max-height: 30vh;
+    }
+    
+    #projects .slides .text {
+        font-size: 1rem;
+    }
+
+    #projects .slides .description {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    #projects .project-tech {
+    	bottom: 6px;
+    	padding: 5px 6px;
+    }
+    
+    #projects .tech-tag {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+    }
+
+    #projects .text {
+    	font-size: 1rem;
+    	padding: 6px 3px;
+    }
+    
+    #projects .description {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+    
+    #projects .source-link {
+        padding: 5px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .prev, .next {
+        padding: 8px;
+        font-size: 16px;
+        margin-top: -16px;
+        width: 32px;
+        height: 32px;
+        border-radius: 5px;
+        border-width: 1px;
+    }
+
+    .next {
+        right: 8px;
+    }
+    
+    .prev {
+        left: 8px;
+    }
+    
+    #projects .dot {
+        height: 8px;
+        width: 8px;
+        margin: 2px 3px;
+    }
 }
 
 #scrollTopBtn {
