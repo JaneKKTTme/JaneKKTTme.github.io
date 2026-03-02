@@ -115,17 +115,20 @@
         <div class='slides'>
             <div class='project-card'>
                 <div class='project-image' style='background-image: url("./images/project1.jpg");'>
+                	<a class='prev' onclick='showSlide(--slideIndex);'>❮</a>
+        			<a class='next' onclick='showSlide(++slideIndex);'>❯</a>
+
                     <div class='project-overlay'>
                         <div class='project-tech'>
                             <span class='tech-tag'>Python</span>
                             <span class='tech-tag'>OS Module</span>
                             <span class='tech-tag'>File System</span>
                         </div>
-                        <div class='project-title'>
+                        <h3 class='project-title'>
                             <a href='https://github.com/JaneKKTTme/code-cleanup-utility'>
                                 Скрипт для удаления всего кода среди пользовательских папок
                             </a>
-                        </div>
+                        </h3>
                     </div>
                 </div>
                 <div class='project-content'>
@@ -144,21 +147,24 @@
         <div class='slides'>
             <div class='project-card'>
                 <div class='project-image' style='background-image: url("./images/project2.jpg");'>
+                	<a class='prev' onclick='showSlide(--slideIndex);'>❮</a>
+        			<a class='next' onclick='showSlide(++slideIndex);'>❯</a>
+
                     <div class='project-overlay'>
                         <div class='project-tech'>
                             <span class='tech-tag'>Python</span>
                             <span class='tech-tag'>Flask</span>
                         </div>
-                        <div class='project-title'>
+                        <h3 class='project-title'>
                             <a href='https://link-shorter-si7x.onrender.com/'>
                                 Сервис для сокращения ссылок
                             </a>
-                        </div>
+                        </h3>
                     </div>
                 </div>
                 <div class='project-content'>
                     <div class='description'>
-                        Сервис для сокращения ссылок с базой данных
+                        Сервис для сокращения ссылок с собственной базой данных без сторонних API
                     </div>
                     <div class='project-links'>
                         <a href='https://github.com/JaneKKTTme/link-shortener' class='source-link'>
@@ -172,25 +178,40 @@
         <div class='slides'>
             <div class='project-card'>
                 <div class='project-image' style='background-image: url("./images/project3.jpg");'>
+                	<a class='prev' onclick='showSlide(--slideIndex);'>❮</a>
+        			<a class='next' onclick='showSlide(++slideIndex);'>❯</a>
+
                     <div class='project-overlay'>
                         <div class='project-tech'>
                             <span class='tech-tag'>Python</span>
+                            <span class='tech-tag'>Tableau</span>
                         </div>
-                        <div class='project-title'>
-                            Анализ стоимости квадратного метра недвижимости (в процессе :)))
-                        </div>
+                        <h3 class='project-title'>
+                        	<a href='https://janekkttme.github.io/dynamics-of-prices-per-square-meter-of-real-estate/'>
+                            	Анализ стоимости квадратного метра недвижимости
+                        	</a>
+                        </h3>
                     </div>
                 </div>
                 <div class='project-content'>
                     <div class='description'>
-                        Данные содержат информацию о стоимости квадратного метра в разных категориях недвижимости.
+                        Данные содержат информацию о стоимости квадратного метра первичного и вторичного рынков недвижимости в регионах России в период с января 2022 по сентябрь 2025.
+                    </div>
+                    <div class='project-source'>
+                    	<span class='source-label'>Источник данных</span>
+                    	<a href='https://www.sberindex.ru' class='source-link' target='_blank' rel='noopener noreferrer'>
+                    		<i class='fas fa-external-link-alt'></i>
+                    		Сбериндекс
+                    	</a>
+                    </div>
+                    <div class='project-links'>
+                        <a href='https://github.com/JaneKKTTme/dynamics-of-prices-per-square-meter-of-real-estate' class='source-link'>
+                            <i class='fab fa-github'></i> Исходный код
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <a class='prev' onclick='showSlide(--slideIndex);'>❮</a>
-        <a class='next' onclick='showSlide(++slideIndex);'>❯</a>
 
         <div class='dot-container'>
             <span class='dot' onclick='currentSlide(0);'></span>
