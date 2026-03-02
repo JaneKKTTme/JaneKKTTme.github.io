@@ -419,14 +419,14 @@ hr.hreducation {
 }
 
 #projects .project-image {
-    flex: 0 0 100%;
     min-height: 400px;
     background-size: cover;
     background-position: top;
-    background-repeat: no-repeat;
     position: relative;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
 }
 
 #projects .project-overlay {
@@ -531,14 +531,58 @@ hr.hreducation {
     box-shadow: 0 5px 15px rgba(255, 121, 79, 0.3);
 }
 
-.prev, .next {
+.project-source {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+}
+
+.source-label {
+    color: var(--text-on-dark);
+    opacity: 0.7;
+    font-weight: 300;
+}
+
+.project-source .source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent-light);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 4px 12px;
+    background-color: var(--primary-dark);
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.project-source .source-link:hover {
+    background-color: var(--accent);
+    color: var(--text-on-dark);
+    transform: translateY(-2px);
+}
+
+.project-source .source-link i {
+    font-size: 0.8rem;
+}
+
+#projects .project-image .prev,
+#projects .project-image .next {
+	width: 44px;
+    height: 44px;
     background-color: var(--accent);
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: 44px;
-    height: 44px;
+    position: static;
+    transform: none;
     padding: 0;
+    margin: 0;
     margin-top: -22px;
     color: var(--text-on-dark);
     font-weight: 700;
@@ -551,24 +595,16 @@ hr.hreducation {
     justify-content: center;
     transition: var(--transition);
     border: 2px solid var(--accent);
-    transform: translateY(-50%);
-    z-index: 100;
+    z-index: 10;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
 }
 
-.next {
-    right: 20px;
-}
-
-.prev {
-    left: 20px;
-}
-
-.prev:hover,
-.next:hover {
+#projects .project-image .prev:hover,
+#projects .project-image .next:hover {
     background-color: transparent;
     color: var(--accent);
-    transform: translateY(-50%) scale(1.05);
+    transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -690,6 +726,7 @@ hr.hreducation {
         height: auto;
         object-fit: contain;
         max-width: 100%;
+        padding: 15px;
     }
 
     .skills {
@@ -805,6 +842,10 @@ hr.hreducation {
 	}
 
     @media (max-width: 480px) {
+    	.skills {
+    		columns: 1;
+    	}
+
 	    #projects .project-overlay {
 	        gap: 10px;
 	    }
