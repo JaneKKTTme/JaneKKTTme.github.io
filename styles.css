@@ -475,6 +475,8 @@ hr.hreducation {
     margin-bottom: 20px;
     justify-content: flex-start;
     width: 100%;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 #projects .tech-tag {
@@ -520,7 +522,7 @@ hr.hreducation {
     flex-direction: column;
     min-height: 100%;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
     padding: 40px;
     position: relative;
     z-index: 2;
@@ -542,7 +544,8 @@ hr.hreducation {
     color: var(--text-on-dark);
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 25px;
+    margin: 0 0 15px 0;
+    padding-left: 0;
     max-width: 800px;
     opacity: 0.9;
     text-align: left;
