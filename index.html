@@ -22,11 +22,15 @@
 
 	<script src='slide-script.js' type='text/javascript'></script>
 </head>
+<!-- ===== MAIN CONTAINER ===== -->
 <body>
-	<button id='burger' aria-label='Меню'>
+	<!-- Mobile menu burger button with accessibility attributes -->
+	<button id='burger' aria-label='Меню' aria-expanded='false' aria-controls='main-nav'>
   		<i class='fas fa-bars'></i>
 	</button>
-	<nav>
+
+	<!-- Navigation menu with photo, name and links -->
+	<nav id='main-nav'>
 		<ul class='leftnav'>
 			<li><p>Евгения<br/>Хоменко</p></li>
 			<li><div class='image'><img src='./images/photo.png' alt='photo'/></div></li>
@@ -46,6 +50,8 @@
 			</a></li>
 		</ul>
 	</nav>
+
+	<!-- ===== ABOUT SECTION ===== -->
 	<section id='about' class='column-container'>	
 		<div class='leftcolumn'>
 			<p class='lefttext'>Аналитик в душе, разработчик в процессе становления приветствует вас.</p>
@@ -87,6 +93,8 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- ===== EDUCATION SECTION ===== -->
 	<section id='education' class='fade-in'>
 		<div>
 			<div class='education'>
@@ -110,117 +118,106 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- ===== PROJECTS SECTION WITH SLIDER ===== -->
 	<section id='projects' class='fade-in'>	
     <div class='container'>
         <div class='slides'>
-            <div class='project-card'>
-                <div class='project-image' style='background-image: url("./images/project1.jpg");'>
-                	<a class='prev' onclick='showSlide(--slideIndex);'>❮</a>
-        			<a class='next' onclick='showSlide(++slideIndex);'>❯</a>
-
-                    <div class='project-overlay'>
-                        <div class='project-tech'>
-                            <span class='tech-tag'>Python</span>
-                            <span class='tech-tag'>OS Module</span>
-                            <span class='tech-tag'>File System</span>
-                        </div>
-                        <h3 class='project-title'>
-                            <a href='https://github.com/JaneKKTTme/code-cleanup-utility'>
-                                Скрипт для удаления всего кода среди пользовательских папок
-                            </a>
-                        </h3>
+            <article class='project-card' style='background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("./images/project1.jpg");'>
+            	<div class='project-content'>
+                    <div class='project-tech'>
+                        <span class='tech-tag'>Python</span>
+                        <span class='tech-tag'>OS Module</span>
+                        <span class='tech-tag'>File System</span>
                     </div>
-                </div>
-                <div class='project-content'>
-                    <div class='description'>
+                    <h3 class='project-title'>
+                        <a href='https://github.com/JaneKKTTme/code-cleanup-utility'>
+                            Скрипт для удаления всего кода среди пользовательских папок
+                        </a>
+                    </h3>
+                    <div class='project-description'>
                         Скрипт рожден желанием сократить время при подготовке устройства к проведению пробных экзаменов ОГЭ / ЕГЭ. В результате все основные программные файлы и пустые папки удалены, а у учеников пропадает возможность воспользоваться старым и позабытым кодом при попытке списывания.
                     </div>
                     <div class='project-links'>
                         <a href='https://github.com/JaneKKTTme/code-cleanup-utility' class='source-link'>
-                            <i class='fab fa-github'></i> Исходный код
+                            <i class='fab fa-github'></i>
+                            Исходный код
                         </a>
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
         
         <div class='slides'>
-            <div class='project-card'>
-                <div class='project-image' style='background-image: url("./images/project2.jpg");'>
-                	<a class='prev' onclick='showSlide(--slideIndex);'>❮</a>
-        			<a class='next' onclick='showSlide(++slideIndex);'>❯</a>
-
-                    <div class='project-overlay'>
-                        <div class='project-tech'>
-                            <span class='tech-tag'>Python</span>
-                            <span class='tech-tag'>Flask</span>
-                        </div>
-                        <h3 class='project-title'>
-                            <a href='https://link-shorter-si7x.onrender.com/'>
-                                Сервис для сокращения ссылок
-                            </a>
-                        </h3>
-                    </div>
-                </div>
-                <div class='project-content'>
-                    <div class='description'>
-                        Сервис для сокращения ссылок с собственной базой данных без сторонних API
-                    </div>
-                    <div class='project-links'>
-                        <a href='https://github.com/JaneKKTTme/link-shortener' class='source-link'>
-                            <i class='fab fa-github'></i> Исходный код
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <article class='project-card' style='background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("./images/project2.jpg");'>
+    			<div class='project-content'>
+    				<div class='project-tech'>
+	                    <span class='tech-tag'>Python</span>
+	                    <span class='tech-tag'>Flask</span>
+	                </div>
+	                <h3 class='project-title'>
+	                    <a href='https://link-shorter-si7x.onrender.com/'>
+	                        Сервис для сокращения ссылок
+	                    </a>
+	                </h3>
+	                <div class='project-description'>
+	                    Сервис для сокращения ссылок с собственной базой данных без сторонних API
+	                </div>
+	                <div class='project-links'>
+	                    <a href='https://github.com/JaneKKTTme/link-shortener' class='source-link'>
+	                        <i class='fab fa-github'></i> Исходный код
+	                    </a>
+	                </div>
+	            </div>
+            </article>
         </div>
         
         <div class='slides'>
-            <div class='project-card'>
-                <div class='project-image' style='background-image: url("./images/project3.jpg");'>
-                	<a class='prev' onclick='showSlide(--slideIndex);'>❮</a>
-        			<a class='next' onclick='showSlide(++slideIndex);'>❯</a>
-
-                    <div class='project-overlay'>
-                        <div class='project-tech'>
-                            <span class='tech-tag'>Python</span>
-                            <span class='tech-tag'>Tableau</span>
-                        </div>
-                        <h3 class='project-title'>
-                        	<a href='https://janekkttme.github.io/dynamics-of-prices-per-square-meter-of-real-estate/'>
-                            	Анализ стоимости квадратного метра недвижимости
-                        	</a>
-                        </h3>
-                    </div>
-                </div>
-                <div class='project-content'>
-                    <div class='description'>
-                        Данные содержат информацию о стоимости квадратного метра первичного и вторичного рынков недвижимости в регионах России в период с января 2022 по сентябрь 2025.
-                    </div>
-                    <div class='project-source'>
-                    	<span class='source-label'>Источник данных</span>
-                    	<a href='https://www.sberindex.ru' class='source-link' target='_blank' rel='noopener noreferrer'>
-                    		<i class='fas fa-external-link-alt'></i>
-                    		Сбериндекс
-                    	</a>
-                    </div>
-                    <div class='project-links'>
-                        <a href='https://github.com/JaneKKTTme/dynamics-of-prices-per-square-meter-of-real-estate' class='source-link'>
-                            <i class='fab fa-github'></i> Исходный код
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <article class='project-card' style='background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("./images/project3.jpg");'>
+    			<div class='project-content'>
+    				<div class='project-tech'>
+	                    <span class='tech-tag'>Python</span>
+	                    <span class='tech-tag'>Tableau</span>
+	                </div>
+	                <h3 class='project-title'>
+	                	<a href='https://janekkttme.github.io/dynamics-of-prices-per-square-meter-of-real-estate/'>
+	                    	Анализ стоимости квадратного метра недвижимости
+	                	</a>
+	                </h3>
+	                <div class='project-description'>
+	                    Данные содержат информацию о стоимости квадратного метра первичного и вторичного рынков недвижимости в регионах России в период с января 2022 по сентябрь 2025.
+	                </div>
+	                <div class='project-source'>
+	                	<span class='source-label'>
+	                		Источник данных
+	                	</span>
+	                	<a href='https://www.sberindex.ru' class='source-link' target='_blank' rel='noopener noreferrer'>
+	                		<i class='fas fa-external-link-alt'></i>
+	                		Сбериндекс
+	                	</a>
+	                </div>
+	                <div class='project-links'>
+	                    <a href='https://github.com/JaneKKTTme/dynamics-of-prices-per-square-meter-of-real-estate' class='source-link'>
+	                        <i class='fab fa-github'></i>
+	                        Исходный код
+	                    </a>
+	                </div>
+            	</div>
+            </article>
         </div>
+
+        <a class='prev' aria-label='Предыдущий проект'>❮</a>
+    	<a class='next' aria-label='Следующий проект'>❯</a>
 
         <div class='dot-container'>
-            <span class='dot' onclick='currentSlide(0);'></span>
-            <span class='dot' onclick='currentSlide(1);'></span>
-            <span class='dot' onclick='currentSlide(2);'></span>
+            <span class='dot'></span>
+            <span class='dot'></span>
+            <span class='dot'></span>
         </div>
     </div>
 </section>
-
+	
+	<!-- ===== SCROLL TO TOP BUTTON ===== -->
 	<button id='scrollTopBtn' aria-label='Наверх'>↑</button>
 
 </body>

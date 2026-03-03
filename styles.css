@@ -1,3 +1,4 @@
+/* ===== Basic styles ===== */
 :root {
 	--primary-dark: #333333;
 	--primary-light: #F8F5F7;
@@ -36,6 +37,8 @@ body {
 	line-height: 1.3;
 }
 
+
+/* ===== Navigation ===== */
 #burger {
   position: fixed;
   top: 10px;
@@ -93,11 +96,10 @@ nav .leftnav img {
 	height: auto;
 	border-radius: 8px;
 	transition: var(--transition);
-	filter: grayscale(30%);
 }
 
 nav .leftnav img:hover {
-	filter: grayscale(0);
+	filter: contrast(120%);
 }
 
 nav .leftnav a {
@@ -110,6 +112,18 @@ nav .leftnav a {
 	border-radius: 6px;
 	transition: var(--transition);
 	position: relative;
+}
+
+nav .leftnav a.active {
+	color: var(--accent);
+	background-color: rgba(255, 121, 79, 0.1);
+	transform: translateX(5px);
+}
+
+nav .leftnav a.active::before {
+	width: 100%;
+	background-color: var(--accent-light);
+	height: 3px;
 }
 
 nav .leftnav a::before {
@@ -176,6 +190,8 @@ nav .contacts a:hover {
 	transform: translateX(5px);
 }
 
+
+/* ===== Basic section ===== */
 section {
 	margin: 0;
 	padding: 0;
@@ -189,6 +205,8 @@ section {
 	box-sizing: border-box;
 }
 
+
+/* ===== Section "About me" ===== */
 #about {
 	justify-content: center;
  	text-align: center;
@@ -219,12 +237,19 @@ section {
 	align-items: center;
 	text-align: left;
 	width: 100%;
-	height: auto;
 	padding: 30px;
 	background-color: var(--card-bg);
 	border-radius: 12px;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 	transition: var(--transition);
+}
+
+.lefttext {
+	font-size: 120%;
+	text-align: left;
+	margin: 15px 8px;
+	font-weight: 300;
+	line-height: 1.2;
 }
 
 .rightcolumn {
@@ -248,18 +273,6 @@ section {
 	box-shadow: 5px 15px 35px rgba(0, 0, 0, 0.25);
 }
 
-.skills {
-	margin: 0 0 2vh 0;
-}
-
-.lefttext {
-	font-size: 120%;
-	text-align: left;
-	margin: 15px 8px;
-	font-weight: 300;
-	line-height: 1.2;
-}
-
 .righttext {
 	font-size: 120%;
 	text-align: left;
@@ -279,6 +292,10 @@ section {
 	height: 3px;
 	background: var(--text-on-dark);
 	border-radius: 3px;
+}
+
+.skills {
+	margin: 0 0 2vh 0;
 }
 
 .skilltype {
@@ -305,6 +322,8 @@ section {
 	color: var(--text-on-dark);
 }
 
+
+/* ===== Section "Education" ===== */
 #education {
 	display: flex;
 	flex-direction: column;
@@ -373,6 +392,8 @@ hr.hreducation {
 	color: var(--accent-light);
 }
 
+
+/* ===== Section "Projects" ===== */
 #projects {
     display: flex;
     flex-direction: column;
@@ -391,9 +412,8 @@ hr.hreducation {
     position: relative;
     margin: auto;
     border-radius: 12px;
-    background-color: var(--card-bg);
+    background-color: transparent;
     padding: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
 }
@@ -412,50 +432,61 @@ hr.hreducation {
 #projects .project-card {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    border-radius: 10px;
+    justify-content: flex-end;
+    min-height: 600px;
+    border-radius: 12px;
     overflow: hidden;
-    background-color: var(--primary-dark);
-}
-
-#projects .project-image {
-    min-height: 400px;
     background-size: cover;
-    background-position: top;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
 }
 
-#projects .project-overlay {
-    position: absolute;
-    bottom: 0;
+#projects .project-card::before {
+	content: '';
+	position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    padding: 30px 20px 20px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5), transparent);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    bottom: 0;
+    background: inherit;
+    filter: blur(8px) brightness(0.7);
+    z-index: 0;
+    transition: var(--transition);
+    opacity: 0.8;
+}
+
+#projects .project-card:hover::before {
+	filter: blur(4px) brightness(0.8);
+    opacity: 0.9;
+}
+
+#projects .project-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 #projects .project-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 #projects .tech-tag {
     background-color: var(--accent);
     color: var(--text-on-dark);
-    padding: 6px 12px;
+    padding: 8px 12px;
     border-radius: 8px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 500;
     transition: var(--transition);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    display: inline-block;
 }
 
 #projects .tech-tag:hover {
@@ -464,63 +495,95 @@ hr.hreducation {
 }
 
 #projects .project-title {
-    color: var(--text-on-dark);
-    font-size: 1.4rem;
+ 	margin: 0 0 15px 0;
+ 	font-size: 2rem;
     font-weight: 700;
     line-height: 1.3;
+    text-align: left;
+    width: 100%;
 }
 
 #projects .project-title a {
     color: var(--text-on-dark);
     text-decoration: none;
     transition: var(--transition);
+    display: inline-block;
 }
 
 #projects .project-title a:hover {
     color: var(--accent-light);
-    text-decoration: underline;
+    transform: translateX(5px);
 }
 
 #projects .project-content {
-    flex: 1;
-    padding: 25px;
     display: flex;
     flex-direction: column;
-    background-color: var(--card-bg);
+    min-height: 100%;
+    justify-content: flex-end;
     align-items: center;
-    text-align: center;
+    padding: 40px;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(
+        to top,
+        rgba(20, 20, 20, 0.95) 0%,
+        rgba(30, 30, 30, 0.7) 40%,
+        rgba(40, 40, 40, 0.3) 80%,
+        transparent 100%
+    );
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 100%;
 }
 
-#projects .description {
+#projects .project-description {
     color: var(--text-on-dark);
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     max-width: 800px;
+    opacity: 0.9;
+    text-align: left;
+    width: 100%;
+}
+
+#projects .project-description a {
+    color: var(--accent-light);
+    text-decoration: none;
+    transition: var(--transition);    
+}
+
+#projects .project-description a:hover {
+    text-decoration: underline;
+    color: var(--accent);   
 }
 
 #projects .project-links {
-    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 10px;
 }
 
 #projects .source-link {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
     color: var(--text-on-dark);
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 12px 28px;
+    border-radius: 20px;
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
     border: 2px solid transparent;
-    font-size: 0.95rem;
+    font-size: 1rem;
     white-space: nowrap;
+    min-width: 160px;
 }
 
 #projects .source-link:hover {
@@ -531,85 +594,58 @@ hr.hreducation {
     box-shadow: 0 5px 15px rgba(255, 121, 79, 0.3);
 }
 
-.project-source {
-    display: flex;
+#projects .project-source {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin: 15px 0;
-    padding: 8px 15px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    font-size: 0.95rem;
-    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 auto 20px auto;
+    padding: 6px 16px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 121, 79, 0.2);
+    backdrop-filter: blur(5px);
+    width: fit-content;
+    max-width: 100%;
 }
 
-.source-label {
+#projects .source-label {
     color: var(--text-on-dark);
-    opacity: 0.7;
+    opacity: 0.8;
     font-weight: 300;
+    font-size: 0.85rem;
 }
 
-.project-source .source-link {
+#projects .project-source .source-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: var(--accent-light);
+    color: var(--text-on-dark);
     text-decoration: none;
     font-weight: 500;
     padding: 4px 12px;
     background-color: var(--primary-dark);
     border-radius: 20px;
     transition: var(--transition);
+    font-size: 0.85rem;
+    border: 1px solid transparent;
+    white-space: nowrap;
 }
 
-.project-source .source-link:hover {
+#projects .project-source .source-link:hover {
     background-color: var(--accent);
     color: var(--text-on-dark);
     transform: translateY(-2px);
+    border-color: var(--accent-light);
 }
 
-.project-source .source-link i {
-    font-size: 0.8rem;
-}
-
-#projects .project-image .prev,
-#projects .project-image .next {
-	width: 44px;
-    height: 44px;
-    background-color: var(--accent);
-    cursor: pointer;
-    position: static;
-    transform: none;
-    padding: 0;
-    margin: 0;
-    margin-top: -22px;
-    color: var(--text-on-dark);
-    font-weight: 700;
-    font-size: 20px;
-    border-radius: 8px;
-    user-select: none;
-    -webkit-user-select: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-    border: 2px solid var(--accent);
-    z-index: 10;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    flex-shrink: 0;
-}
-
-#projects .project-image .prev:hover,
-#projects .project-image .next:hover {
-    background-color: transparent;
-    color: var(--accent);
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+#projects .project-source .source-link i {
+    font-size: 0.75rem;
 }
 
 #projects .dot-container {
-    margin: 10px 0 5px 0;
+    margin: 20px 0 10px 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -617,13 +653,13 @@ hr.hreducation {
     text-align: center;
     height: auto;
     position: relative;
+    gap: 10px;
 }
 
 #projects .dot {
     cursor: pointer;
     height: 12px;
     width: 12px;
-    margin: 0 6px;
     border-radius: 50%;
     display: block;
     transition: var(--transition);
@@ -636,6 +672,89 @@ hr.hreducation {
     transform: scale(1.2);
 }
 
+
+/* ===== Buttons ===== */
+.prev, .next {
+    background-color: var(--accent);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin-top: -25px;
+    color: var(--text-on-dark);
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 8px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    border: 2px solid var(--accent);
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+	right: 5px;
+}
+
+.prev:hover, .next:hover {
+    background-color: transparent;
+    color: var(--accent);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scrollTopBtn:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ===== Animation ===== */
+.fade-in {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+
+/* ===== Media queries ===== */
 @media (min-width: 1061px) {
     body {
         padding-left: 25%;
@@ -667,7 +786,6 @@ hr.hreducation {
 	    padding-top: 50px;
 	    padding-right: 10%;
 	    overflow-y: auto;
-	    transition: left 0.4s ease-in-out;
   	}
 
   	nav.show {
@@ -746,9 +864,12 @@ hr.hreducation {
     }
 
     .education {
-    	width: 100%;
-    	margin: 15px 0;
-    	padding: 15px;
+    	margin: 12px 0;
+    	padding: 20px 15px;
+    }
+
+    .education p {
+    	margin: 8px 0;
     }
 
     .year, .program {
@@ -760,31 +881,89 @@ hr.hreducation {
     }
 
     #projects {
-        padding: 15px 5px;
-        min-height: 70vh;
+        padding: 20px 10px;
+        min-height: auto;
     }
     
     .container {
         width: 95%;
-        min-height: 55vh;
-        padding: 10px;
+        min-height: auto;
+        padding: 15px;
     }
     
     #projects .project-card {
-        flex-direction: column;
-    }
-    
-    #projects .project-image {
-        flex: 0 0 40%;
-        min-height: 180px;
-    }
-    
-    #projects .project-overlay {
-        padding: 15px 10px 10px;
+        min-height: 500px;
     }
     
     #projects .project-title {
-        font-size: 1.1rem;
+        font-size: 1.6rem;
+    }
+    
+    #projects .tech-tag {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+    
+    #projects .project-content {
+        padding: 30px;
+        align-items: center;
+    }
+
+    #projects .project-source {
+    	padding: 5px 14px;
+    }
+
+    #projects .source-label {
+    	font-size: 0.8rem;
+    }
+
+    #projects .project-links {
+    	margin-top: 10px;
+    }
+    
+    #projects .project-description {
+    	text-align: left;
+        width: 100%;
+    }
+    
+    #projects .project-source .source-link {
+        padding: 3px 10px;
+        font-size: 0.95rem;
+    }
+
+    #projects .dot-container {
+    	margin: 8px 0 5px 0;
+    }
+}
+
+@media (max-width: 768px) {	    
+    #projects .tech-tag {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    
+    #projects .project-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+	.skills {
+		columns: 1;
+	}
+
+	#projects .project-card {
+		min-height: 450px;
+	}
+    
+    #projects .project-title {
+        text-align: left;
+        width: 100%;
+    }
+
+    #projects .project-tech {
+    	justify-content: flex-start;
+    	width: 100%;
     }
     
     #projects .tech-tag {
@@ -793,150 +972,51 @@ hr.hreducation {
     }
     
     #projects .project-content {
-        padding: 20px;
+        padding: 25px;
+        align-items: center;
     }
 
-    #projects .project-links {
-    	margin-top: 10px;
-    }
-    
-    #projects .description {
+    #projects .project-source {
+    	padding: 3px 10px;
     	margin-bottom: 12px;
-        font-size: 1rem;
+    	gap: 6px;
+    }
+
+    #projects .project-description {
+    	text-align: left;
+    	margin-bottom: 20px;
+    	width: 100%;
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
     
     #projects .source-link {
-        padding: 8px 16px;
-        font-size: 0.9rem;
+        padding: 7px 14px;
+        font-size: 0.85rem;
+        min-width: 100%;
     }
 
     #projects .dot-container {
-    	margin: 8px 0 5px 0;
+    	margin: 5px 0 3px 0;
+    }
+    
+    #projects .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 4px;
     }
     
     .prev, .next {
-        width: 38px;
-        height: 38px;
-        font-size: 18px;
-        margin-top: -19px;
-        border-radius: 6px;
+    	width: 36px;
+    	height: 36px;
+    	font-size: 16px;
     }
-    
-    .next {
-        right: 10px;
-    }
-    
+
     .prev {
-        left: 10px;
+    	left: 2px;
     }
 
-    @media (max-width: 768px) {	    
-	    #projects .tech-tag {
-	        font-size: 0.75rem;
-	        padding: 4px 8px;
-	    }
-	    
-	    #projects .description {
-	        font-size: 0.95rem;
-	    }
-	}
-
-    @media (max-width: 480px) {
-    	.skills {
-    		columns: 1;
-    	}
-
-	    #projects .project-overlay {
-	        gap: 10px;
-	    }
-	    
-	    #projects .project-title {
-	        font-size: 1rem;
-	    }
-	    
-	    #projects .tech-tag {
-	        font-size: 0.7rem;
-	        padding: 3px 6px;
-	    }
-	    
-	    #projects .project-content {
-	        padding: 15px;
-	    }
-   
-	    #projects .description {
-	    	margin-bottom: 10px;
-	        font-size: 0.9rem;
-	        line-height: 1.5;
-	    }
-	    
-	    #projects .source-link {
-	        padding: 7px 14px;
-	        font-size: 0.85rem;
-	    }
-
-	    #projects .dot-container {
-	    	margin: 5px 0 3px 0;
-	    }
-	    
-	    .prev, .next {
-	        width: 32px;
-	        height: 32px;
-	        font-size: 16px;
-	        margin-top: -16px;
-	        border-radius: 5px;
-	        border-width: 1px;
-	    }
-	    
-	    .next {
-	        right: 8px;
-	    }
-	    
-	    .prev {
-	        left: 8px;
-	    }
-	    
-	    #projects .dot {
-	        height: 10px;
-	        width: 10px;
-	        margin: 0 4px;
-	    }
-	}
-}
-
-#scrollTopBtn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 18px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    transition: var(--transition);
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#scrollTopBtn:hover {
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-.fade-in {
-	opacity: 0;
-	transform: translateY(30px);
-	transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-}
-
-.fade-in.visible {
-	opacity: 1;
-	transform: translateY(0);
+    .next {
+    	right: 2px;
+    }
 }
