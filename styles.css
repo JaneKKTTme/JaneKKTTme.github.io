@@ -533,8 +533,6 @@ hr.hreducation {
         rgba(40, 40, 40, 0.3) 80%,
         transparent 100%
     );
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     width: 100%;
@@ -670,7 +668,8 @@ hr.hreducation {
     border: 1px solid #333;
 }
 
-#projects .active, .dot:hover {
+#projects .dot.active,
+#projects .dot:hover {
     background-color: var(--accent);
     transform: scale(1.2);
 }
@@ -773,7 +772,7 @@ hr.hreducation {
     }
 
 	#burger {
-		display: block;
+		display: none;
 	}
 
 	nav {

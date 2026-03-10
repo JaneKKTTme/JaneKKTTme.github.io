@@ -92,7 +92,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (burger && nav) {
             burger.addEventListener('click', () => {
-                const isExpanded = nav.classList.toggle('show');
+                nav.classList.toggle('show');
+                const isExpanded = nav.classList.contains('show');
                 burger.setAttribute('aria-expanded', isExpanded);
             });
 
