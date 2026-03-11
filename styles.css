@@ -369,8 +369,8 @@ section {
 hr.hreducation {
 	border: 2px solid var(--accent);
 	border-radius: 5px;
-	margin-top: 5%;
-	margin-bottom: 5%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	width: 70%;
 }
 
@@ -675,6 +675,255 @@ hr.hreducation {
 }
 
 
+/* ===== Contact Section ===== */
+#contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    max-height: 1000px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-on-dark);
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+    border-radius: 2px;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-info {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--accent-light);
+    margin: 0 0 20px 0;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-on-dark);
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.resume-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(135deg, #2a2a2a 0%, #333333 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 121, 79, 0.2);
+    transition: var(--transition);
+}
+
+.resume-card:hover {
+    border-color: var(--accent);
+    transform: translateX(5px);
+}
+
+.resume-card i.fa-file-pdf {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+.resume-info {
+    flex: 1;
+}
+
+.resume-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-on-dark);
+    margin: 0 0 5px 0;
+}
+
+.resume-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+    color: var(--text-on-dark);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.resume-download:hover {
+    background: transparent;
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--text-on-dark);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: var(--transition);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.contact-item i {
+    width: 24px;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.contact-item:hover {
+    background-color: rgba(255, 121, 79, 0.1);
+    color: var(--accent);
+    transform: translateX(5px);
+}
+
+.contact-form {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--accent-light);
+    margin: 0;
+}
+
+iframe {
+	width: 100%;
+	height: 90%;
+	height: 450px;
+	frameborder: 0;
+	margin: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #ddd;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #2a2a2a;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    color: var(--text-on-dark);
+    font-size: 1rem;
+    transition: var(--transition);
+    font-family: 'Geologica', sans-serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background-color: #333;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #666;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+    color: var(--text-on-dark);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(255, 121, 79, 0.4);
+}
+
+.submit-btn i {
+    font-size: 1rem;
+}
+
+
 /* ===== Buttons ===== */
 .prev, .next {
     background-color: var(--accent);
@@ -772,7 +1021,7 @@ hr.hreducation {
     }
 
 	#burger {
-		display: none;
+		display: block;
 	}
 
 	nav {
@@ -936,9 +1185,52 @@ hr.hreducation {
     #projects .dot-container {
     	margin: 8px 0 5px 0;
     }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 30px;
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 1.6rem;
+    }
+
+    .resume-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .resume-info {
+        text-align: center;
+    }
+
+    .resume-download {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
-@media (max-width: 768px) {	    
+@media (max-width: 768px) {
+	.column-container {
+		padding: 10px;
+		gap: 5px;
+	}
+
+	.leftcolumn {
+
+	}
+
     #projects .tech-tag {
         font-size: 0.75rem;
         padding: 4px 8px;
@@ -947,20 +1239,62 @@ hr.hreducation {
     #projects .project-description {
         font-size: 0.95rem;
     }
+
+    #contacts {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .resume-card {
+    	gap: 5px;
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 1.4rem;
+    }
+
+    .contact-text {
+        font-size: 1rem;
+    }
+
+    .contact-item {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    .contact-wrapper {
+    	gap: 10px;
+    }
+
+    iframe {
+    	height: 240px;
+    }
 }
 
 @media (max-width: 480px) {
 	.skills {
 		columns: 1;
+		font-size: 0.8rem;
+		padding: 3px 6px;
+	}
+
+	.lefttext,
+	.righttext {
+		font-size: 1rem;
 	}
 
 	#projects .project-card {
-		min-height: 450px;
+		min-height: 350px;
 	}
     
     #projects .project-title {
         text-align: left;
         width: 100%;
+        font-size: 1.2rem;
     }
 
     #projects .project-tech {
@@ -969,8 +1303,8 @@ hr.hreducation {
     }
     
     #projects .tech-tag {
-        font-size: 0.8rem;
-        padding: 5px 10px;
+        font-size: 0.7rem;
+        padding: 3px 6px;
     }
     
     #projects .project-content {
@@ -988,14 +1322,14 @@ hr.hreducation {
     	text-align: left;
     	margin-bottom: 20px;
     	width: 100%;
-        font-size: 0.95rem;
+        font-size: 0.85rem;
         line-height: 1.5;
     }
     
     #projects .source-link {
         padding: 7px 14px;
-        font-size: 0.85rem;
-        min-width: 100%;
+        font-size: 0.8rem;
+        min-width: 120px;
     }
 
     #projects .dot-container {
@@ -1020,5 +1354,65 @@ hr.hreducation {
 
     .next {
     	right: 2px;
+    }
+
+    #contacts {
+    	padding: 10px;
+    }
+
+    .section-title {
+    	font-size: 1.2rem;
+    }
+
+    .contact-info,
+    .contact-form {
+    	font-size: 1rem;
+        padding: 20px;
+    }
+
+    .contact-info h3,
+    .contact-text {
+    	font-size: 0.9rem;
+    }
+
+    .contact-item {
+    	font-size: 0.85rem;
+    	padding: 5px 10px;
+    }
+
+    .resume-card {
+        padding: 15px;
+    }
+
+    .resume-card i.fa-file-pdf {
+    	font-size: 2rem;
+    }
+
+    .resume-info h4 {
+    	font-size: 1rem;
+    }
+
+    .resume-download {
+    	padding: 8px 16px;
+    	font-size: 0.8rem;
+    }
+
+    .contact-details {
+        gap: 10px;
+    }
+
+    iframe {
+    	height: 150px;
+    }
+
+    .prev, .next {
+    	width: 32px;
+    	height: 32px;
+    	font-size: 14px;
+    }
+
+    .dot {
+    	height: 8px;
+    	width: 8px;
     }
 }

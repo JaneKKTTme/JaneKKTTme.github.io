@@ -144,13 +144,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const sections = [
             document.getElementById('about'),
             document.getElementById('education'),
-            document.getElementById('projects')
+            document.getElementById('projects'),
+            document.getElementById('contacts')
         ].filter(s => s);
 
         const navLinks = [
             document.querySelector('nav a[href="#about"]'),
             document.querySelector('nav a[href="#education"]'),
-            document.querySelector('nav a[href="#projects"]')
+            document.querySelector('nav a[href="#projects"]'),
+            document.querySelector('nav a[href="#contacts"]')
         ].filter(l => l);
 
         function removeActiveClasses() {
