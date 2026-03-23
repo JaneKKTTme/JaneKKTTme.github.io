@@ -399,10 +399,8 @@ hr.hreducation {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: auto;
+    min-height: 100vh;
     box-sizing: border-box;
-    margin-bottom: 0;
-    padding: 40px auto 60px;
 }
 
 .container {
@@ -657,9 +655,8 @@ hr.hreducation {
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: auto;
-    padding: 10px;
-    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .contact-container {
@@ -1148,7 +1145,7 @@ iframe {
     }
 
     #projects .project-links {
-    	margin-top: 10px;
+    	margin: auto 10px auto;
     }
     
     #projects .project-description {
@@ -1168,6 +1165,10 @@ iframe {
     #contacts {
     	margin: 0;
     	padding: 0;
+    }
+
+    .contact-container {
+    	margin: 0;
     }
 
     .contact-text {
@@ -1242,6 +1243,11 @@ iframe {
         font-size: 0.95rem;
     }
 
+    #projects .project-links {
+    	margin: 0;
+    	width: auto;
+    }
+
     .section-title {
         font-size: 1.8rem;
     }
@@ -1314,8 +1320,9 @@ iframe {
     
     #projects .source-link {
         padding: 7px 14px;
+        margin: 0 5px 0;
         font-size: 0.8rem;
-        min-width: 120px;
+        min-width: auto;
     }
 
     #projects .dot-container {
@@ -1326,6 +1333,10 @@ iframe {
         height: 10px;
         width: 10px;
         margin: 0 4px;
+    }
+
+    .source-link {
+    	font-size: 0.8em;
     }
     
     .prev, .next {
@@ -1343,7 +1354,12 @@ iframe {
     }
 
     #contacts {
-    	padding: 10px;
+    	padding: 0;
+    }
+
+    .resume-and-contacts {
+    	display: grid;
+    	grid-template-columns: 1fr;
     }
 
     .section-title {
@@ -1353,6 +1369,7 @@ iframe {
     .contact-info,
     .contact-form {
     	font-size: 1rem;
+    	padding: 10px;
     }
 
     .contact-info h3,
@@ -1366,6 +1383,7 @@ iframe {
 
     .resume-card {
         padding: 15px;
+        margin: 0;
     }
 
     .resume-card i.fa-file-pdf {
