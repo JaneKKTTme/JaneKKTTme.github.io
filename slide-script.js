@@ -9,7 +9,8 @@ const dots = document.getElementsByClassName('dot');
 function startSlideShow() {
     if (slides.length === 0) return;
 
-    clearInterval(slideInterval); // Clear previous interval before starting new one
+    // Clear previous interval before starting new one
+    clearInterval(slideInterval); 
     slideInterval = setInterval(() => {
         showSlide(slideIndex + 1);
     }, 5000);
