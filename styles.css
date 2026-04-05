@@ -237,7 +237,8 @@ section {
 	align-items: center;
 	text-align: left;
 	width: 100%;
-	padding: 30px;
+	padding: 20px;
+	margin: 0;
 	background-color: var(--card-bg);
 	border-radius: 12px;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -245,11 +246,11 @@ section {
 }
 
 .lefttext {
-	font-size: 90%;
+	font-size: 1rem;
 	text-align: left;
 	margin: 15px 8px;
 	font-weight: 300;
-	line-height: 1.2;
+	line-height: 1.6;
 }
 
 .rightcolumn {
@@ -263,18 +264,19 @@ section {
 	display: inline-block;
 	justify-content: center;
 	align-items: center;
-	padding: 30px;
+	padding: 20px;
+	margin: 0;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 	transition: var(--transition);
 }
 
-.rightcolumn:hover {
+.leftcolumn:hover, .rightcolumn:hover {
 	transform: translateY(-5px);
 	box-shadow: 5px 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 .righttext {
-	font-size: 120%;
+	font-size: 1rem;
 	text-align: left;
 	font-weight: 700;
 	justify-content: center;
