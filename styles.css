@@ -1632,28 +1632,34 @@ iframe {
     	padding: 0;
     }
 
+    .contact-wrapper {
+    	gap: 5px;
+    }
+
     .resume-and-contacts {
     	display: grid;
     	grid-template-columns: 1fr;
     }
 
     .section-title {
-    	font-size: 1.2rem;
+    	font-size: 0.9rem;
+    	margin-bottom: 15px;
     }
 
     .contact-info,
     .contact-form {
-    	font-size: 1rem;
+    	font-size: 0.8rem;
     	padding: 10px;
     }
 
     .contact-info h3,
+    .contact-form h3,
     .contact-text {
-    	font-size: 0.9rem;
+    	font-size: 0.8rem;
     }
 
     .contact-item {
-    	font-size: 0.85rem;
+    	font-size: 0.6rem;
     }
 
     .resume-card {
@@ -1662,16 +1668,16 @@ iframe {
     }
 
     .resume-card i.fa-file-pdf {
-    	font-size: 2rem;
+    	font-size: 0.8rem;
     }
 
     .resume-info h4 {
-    	font-size: 1rem;
+    	font-size: 0.8rem;
     }
 
     .resume-download {
     	padding: 8px 16px;
-    	font-size: 0.8rem;
+    	font-size: 0.6rem;
     }
 
     .contact-details {
@@ -1679,7 +1685,7 @@ iframe {
     }
 
     iframe {
-    	height: 150px;
+    	height: 100px;
     }
 
     .prev, .next {
