@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const viewportHeight = window.innerHeight;
                 const scrollPosition = window.scrollY;
                 if (scrollPosition + viewportHeight >= pageHeight - 100) {
-                    addActiveClass(2);
+                    addActiveClass(3);
                 }
             }, { passive: true });
         }
