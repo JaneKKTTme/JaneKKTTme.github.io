@@ -245,7 +245,7 @@ section {
 }
 
 .lefttext {
-	font-size: 120%;
+	font-size: 100%;
 	text-align: left;
 	margin: 15px 8px;
 	font-weight: 300;
@@ -300,7 +300,7 @@ section {
 
 .skilltype {
 	margin: 0;
-	font-size: 110%;
+	font-size: 100%;
 	font-weight: 500;
 }
 
@@ -1077,8 +1077,8 @@ iframe {
     	columns: 2;
     }
 
-    .lefttext, .righttext, .skilltype, .skill {
-        font-size: 100%;
+    .lefttext, .righttext, .skilltype, .skill, .skills {
+        font-size: 85%;
     }
 
     #education {
