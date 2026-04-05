@@ -21,7 +21,7 @@ html {
  	position: relative;
 	background-color: var(--primary-dark);
 	scroll-behavior: smooth;
-	overflow-y: scroll;
+	overflow-y: auto;
 	scrollbar-color: var(--accent-light) var(--primary-dark);
 	scrollbar-width: thin;
 }
@@ -105,7 +105,7 @@ nav .leftnav img:hover {
 nav .leftnav a {
 	color: var(--text-on-dark);
 	text-decoration: none;
-	font-size: 150%;
+	font-size: 1.3rem;
 	font-weight: 600;
 	text-align: left;
 	display: block;
@@ -176,7 +176,7 @@ nav .contacts {
 nav .contacts a {
 	color: var(--text-on-dark);
 	text-decoration: none;
-	font-size: 130%;
+	font-size: 1.1rem;
 	font-weight: 500;
 	display: block;
 	text-align: left;
@@ -1171,7 +1171,7 @@ iframe {
     }
     
     nav .leftnav a {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     } 
 
     nav .contacts a {
