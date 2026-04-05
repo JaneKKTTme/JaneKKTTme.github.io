@@ -1457,6 +1457,9 @@ iframe {
     }
 
     #projects .project-links {
+    	display: flex;
+    	flex-direction: column;
+    	gap: 10px;
     	margin: 0;
     	width: auto;
     }
@@ -1471,11 +1474,11 @@ iframe {
 
     .contact-info h3,
     .contact-form h3 {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
 
     .contact-item {
-        font-size: 1rem;
+        font-size: 0.9rem;
         padding: 8px 12px;
     }
 }
@@ -1588,12 +1591,6 @@ iframe {
     	width: 100%;
         font-size: 0.85rem;
         line-height: 1.5;
-    }
-
-    #projects .project-links {
-    	display: flex;
-    	flex-direction: column;
-    	gap: 10px;
     }
     
     #projects .source-link {
