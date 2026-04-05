@@ -144,6 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const sections = [
             document.getElementById('about'),
+            document.getElementById('experience'),
             document.getElementById('education'),
             document.getElementById('projects'),
             document.getElementById('contacts')
@@ -151,6 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const navLinks = [
             document.querySelector('nav a[href="#about"]'),
+            document.querySelector('nav a[href="#experience"]'),
             document.querySelector('nav a[href="#education"]'),
             document.querySelector('nav a[href="#projects"]'),
             document.querySelector('nav a[href="#contacts"]')
@@ -188,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const viewportHeight = window.innerHeight;
                 const scrollPosition = window.scrollY;
                 if (scrollPosition + viewportHeight >= pageHeight - 100) {
-                    addActiveClass(3);
+                    addActiveClass(4);
                 }
             }, { passive: true });
         }

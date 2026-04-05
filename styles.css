@@ -328,6 +328,144 @@ section {
 }
 
 
+/* ===== Section "Experience" ===== */
+#experience {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: transparent;
+
+}
+
+.experience-container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 120px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+    border-radius: 3px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.timeline-date {
+    width: 100px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--accent);
+    background: rgba(255, 121, 79, 0.1);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    margin-right: 30px;
+    height: fit-content;
+    white-space: nowrap;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 114px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid var(--primary-dark);
+    box-shadow: 0 0 0 3px rgba(255, 121, 79, 0.3);
+    z-index: 2;
+    top: 8px;
+}
+
+.timeline-content {
+    flex: 1;
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 20px 25px;
+    margin-left: 30px;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 121, 79, 0.1);
+}
+
+.timeline-content:hover {
+    transform: translateX(8px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: var(--accent-light);
+}
+
+.experience-company {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.experience-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.exp-tag {
+    background: rgba(255, 121, 79, 0.15);
+    color: var(--accent-light);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 121, 79, 0.3);
+}
+
+.experience-duties {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-duties li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: var(--text-on-dark);
+    opacity: 0.9;
+}
+
+.experience-duties li::marker, a {
+    color: var(--accent);
+}
+
+.experience-duties a {
+	color: var(--text-on-dark);
+}
+
+.experience-duties a:hover {
+	color: var(--text-on-light);
+}
+
+
 /* ===== Section "Education" ===== */
 #education {
 	display: flex;
@@ -1061,12 +1199,12 @@ iframe {
         margin: 0;
         box-sizing: border-box;
         min-height: auto;
-        padding: 40px 20px;
+        padding: 10px;
     }
 
     .column-container {
     	flex-direction: column;
-		gap: 30px;
+		gap: 10px;
 		min-height: auto;
 		padding: 0;
     }
@@ -1076,15 +1214,55 @@ iframe {
         height: auto;
         object-fit: contain;
         max-width: 100%;
-        padding: 15px;
+        padding: 10px;
     }
 
     .skills {
-    	columns: 2;
-    }
+		columns: 2;
+	}
 
-    .lefttext, .righttext, .skilltype, .skill, .skills {
-        font-size: 85%;
+    .skills {
+		padding: 3px auto;
+	}
+
+	.lefttext,
+	.righttext,
+	.skilltype,
+	.skill,
+	.skills {
+		font-size: 0.7rem;
+	}
+
+	#experience {
+		padding: auto;
+		margin: auto;
+	}
+
+	.timeline {
+		padding: 10px;
+	}
+
+	.timeline::before {
+		left: 130px;
+	}
+    
+    .timeline-date {
+        font-size: 0.8rem;
+        white-space: normal;
+    }
+    
+    
+    .timeline-content {
+        padding: 10px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+    
+    .experience-duties li,
+    .experience-duties a {
+        font-size: 0.8rem;
     }
 
     #education {
@@ -1231,6 +1409,16 @@ iframe {
 }
 
 @media (max-width: 768px) {
+	.leftcolumn,
+	.rightcolumn {
+		padding: auto;
+		margin: auto;
+	}
+
+	.skills {
+		padding: auto;
+	}
+
 	.righttext {
 		columns: 2;
 	}
@@ -1242,6 +1430,8 @@ iframe {
 	.lefttext,
 	.righttext {
 		font-size: 0.7rem;
+		line-height: 1.4;
+		margin: 5px auto;
 	}
 
 	.skill {
@@ -1291,18 +1481,53 @@ iframe {
 }
 
 @media (max-width: 480px) {
-	.skills {
-		padding: 3px auto;
-	}
-
 	.lefttext,
 	.righttext {
-		font-size: 0.65rem;
+		font-size: 0.6rem;
+		line-height: 1.2;
 	}
 
+	.skills,
+	.skilltype, 
 	.skill {
-		font-size: 0.65rem;
+		font-size: 0.6rem;
 	}
+
+	#experience {
+		padding: 5px;
+		margin: 0;
+	}
+
+	.timeline {
+		padding: 0;
+	}
+
+	.timeline::before {
+		left: 80px;
+	}
+
+	.timeline-dot {
+		left: 74px;
+		top: 60px;
+	}
+
+	.timeline-date {
+		margin-left: -20px;
+		margin-top: 50px;
+		width: 80px;
+	}
+
+	.timeline-content {
+        padding: auto;
+    }
+    
+    .timeline-content h3 {
+        font-size: 0.7rem;
+    }
+    
+    .exp-tag {
+        font-size: 0.6rem;
+    }
 
 	#projects .project-card {
 		min-height: 350px;
