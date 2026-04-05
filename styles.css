@@ -1589,6 +1589,12 @@ iframe {
         font-size: 0.85rem;
         line-height: 1.5;
     }
+
+    #projects .project-links {
+    	display: flex;
+    	flex-direction: column;
+    	gap: 10px;
+    }
     
     #projects .source-link {
         padding: 7px 14px;
