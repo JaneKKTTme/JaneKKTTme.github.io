@@ -334,7 +334,6 @@ section {
     margin: 0;
     min-height: 100vh;
     background: transparent;
-
 }
 
 .experience-container {
@@ -1498,34 +1497,41 @@ iframe {
 		margin: 0;
 	}
 
+	.timeline-item {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+	}
+
 	.timeline {
 		padding: 0;
 	}
 
 	.timeline::before {
-		left: 80px;
+		left: 5px;
 	}
 
 	.timeline-dot {
-		left: 74px;
-		top: 60px;
+		left: 0;
 	}
 
 	.timeline-date {
-		margin-left: -20px;
-		margin-top: 50px;
-		width: 80px;
+		margin-left: 30px;
 	}
 
 	.timeline-content {
-        padding: auto;
+        padding: 10px;
+        margin: 30px;
     }
     
     .timeline-content h3 {
         font-size: 0.7rem;
     }
     
-    .exp-tag {
+    .exp-tag,
+    .experience-company,
+    .experience-duties li,
+    .experience-duties a {
         font-size: 0.6rem;
     }
 
