@@ -43,6 +43,7 @@ body {
   position: fixed;
   top: 10px;
   left: 10px;
+  border-radius: 8px;
   background-color: var(--accent);
   color: var(--text-on-light);
   font-size: 30px;
