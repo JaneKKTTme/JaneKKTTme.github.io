@@ -249,7 +249,7 @@ section {
 }
 
 .lefttext {
-	font-size: 1rem;
+	font-size: 1vmax;
 	text-align: left;
 	margin: 15px 8px;
 	font-weight: 300;
@@ -279,7 +279,7 @@ section {
 }
 
 .righttext {
-	font-size: 1rem;
+	font-size: 1.1vmax;
 	text-align: left;
 	font-weight: 700;
 	justify-content: center;
@@ -305,7 +305,7 @@ section {
 
 .skilltype {
 	margin: 0;
-	font-size: 100%;
+	font-size: 1vmax;
 	font-weight: 500;
 }
 
@@ -1225,14 +1225,6 @@ iframe {
 		padding: 3px auto;
 	}
 
-	.lefttext,
-	.righttext,
-	.skilltype,
-	.skill,
-	.skills {
-		font-size: 0.7rem;
-	}
-
 	#experience {
 		padding: auto;
 		margin: auto;
@@ -1429,13 +1421,8 @@ iframe {
 
 	.lefttext,
 	.righttext {
-		font-size: 0.7rem;
 		line-height: 1.4;
 		margin: 5px auto;
-	}
-
-	.skill {
-		font-size: 0.7rem;
 	}
 
 	.column-container {
