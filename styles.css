@@ -79,6 +79,7 @@ nav .leftnav {
 
 nav ul {
 	list-style-type: none;
+	padding: 0;
 }
 
 .image {
@@ -168,9 +169,7 @@ nav .leftnav p::after {
 nav .contacts {
 	display: flex;
 	flex-direction: column;
-	margin: 0;
-	padding-left: 15px;
-	margin-top: 5%;
+	margin: 1vw;
 }
 
 nav .contacts a {
