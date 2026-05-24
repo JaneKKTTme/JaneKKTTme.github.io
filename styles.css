@@ -776,8 +776,8 @@ hr.hreducation {
 
 #projects .dot {
     cursor: pointer;
-    height: 44px;
-    width: 44px;
+    height: 4vmin;
+    width: 4vmin;
     border-radius: 50%;
     display: block;
     transition: var(--transition);
